@@ -42,6 +42,52 @@ layui.use(['mod1', 'mod2'], function(args){
 
 >  vue2 + vuex + vue-router + webpack + ES6/7 + fetch + less + flex + svg +element-ui
 
+## fetch
+
+传统 Ajax 指的是 XMLHttpRequest（XHR），现在已被 Fetch 替代。
+
+最近把阿里一个千万级 PV 的数据产品全部由 jQuery 的 $.ajax 迁移到 Fetch，上线一个多月以来运行非常稳定。结果证明，对于 IE8+ 以上浏览器，在生产环境使用 Fetch 是可行的。
+
+XMLHttpRequest 是一个设计粗糙的 API，不符合关注分离（Separation of Concerns）的原则，配置和调用方式非常混乱，而且基于事件的异步模型写起来也没有现代的 Promise，generator/yield，async/await 友好。
+
+Fetch 的出现就是为了解决 XHR 的问题，拿例子说明：
+
+使用 XHR 发送一个 JSON 请求一般是这样：
+
+```js
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+xhr.responseType = 'json';
+
+xhr.onload = function() {
+  console.log(xhr.response);
+};
+
+xhr.onerror = function() {
+  console.log("Oops, error");
+};
+
+xhr.send();
+```
+
+使用 Fetch 后，顿时看起来好一点
+
+```js
+    fetch(url)
+
+    .then(response => response.json())
+
+    .then(data => console.log(data))
+
+    .catch(e => console.log("error", e))
+```
+#### 开发环境
+
+    webpack提供一个本地代理，可以代理请求后台API数据，在开发过程中可以使用该方式快速交互，让前端开发者不用在本地运行Java项目即可开发，提高前后开发者的效率。
+
+#### 生产环境
+
+    在服务器上部署一个nodejs项目，使用request模块http请求，将客户端打包后的东西放入该项目即可。
 
 ## 项目运行
 
