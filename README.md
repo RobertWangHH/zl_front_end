@@ -1,32 +1,5 @@
 ## 志力信息科技有限公司后台管理前端技术文档
-### 浏览器兼容要求
-<p align="center">
-    <img src="https://img.shields.io/circleci/project/vuejs/vue/dev.svg" alt="Build Status">
-    <img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
-    <img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
-    <img src="https://img.shields.io/npm/v/vue.svg" alt="Version">
-    <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat">
-    <br><br>
-    <img src="https://saucelabs.com/browser-matrix/vuejs.svg" alt="Sauce Test Status">
-</p>
 
-
-```gantt
-    title 项目开发流程
-    section 项目确定
-        需求分析       :a1, 2016-06-22, 3d
-        可行性报告     :after a1, 5d
-        概念验证       : 5d
-    section 项目实施
-        概要设计      :2016-07-05  , 5d
-        详细设计      :2016-07-08, 10d
-        编码          :2016-07-15, 10d
-        测试          :2016-07-22, 5d
-    section 发布验收
-        发布: 2d
-        验收: 3d
-```
 
 ## 技术栈
 本项目使用者为公司内部人员，不必兼容到IE低版本<br>
@@ -35,8 +8,10 @@
 
 
 
-#layui
-![此处输入图片的描述][1]
+## layui
+<p align="center">
+    <img src="https://saucelabs.com/browser-matrix/layui.svg" alt="Sauce Test Status">
+</p>
 
 layui 定义为“经典模块化”，本身也并不是完全遵循于AMD时代，准确地说，她试图建立自己的模式，所以你会看到：
 
@@ -62,19 +37,12 @@ layui.use(['mod1', 'mod2'], function(args){
 但是 layui 又并非是Requirejs那样的模块加载器，而是一款UI解决方案，她与Bootstrap最大的不同恰恰在于她糅合了自身对经典模块化的理解。
 > 对用户体验比较友好，一个功能是一个js文件，按需加载，不用在初始化的时候就加载很多静态资源。
 
-## 效果演示
-#### 示例(该框架部分UI截图，可根据设计另外单独自定义)
-#### 提示等配色
-![此处输入图片的描述][2]
-![此处输入图片的描述][3]
-#### 数据表格提供灵活的自定义空间
-![此处输入图片的描述][4]
-#### 按钮
-![按钮][5]
-![此处输入图片的描述][6]
-#### 时间选择
-![此处输入图片的描述][7]
-![此处输入图片的描述][8]
+
+## Vue
+
+>  vue2 + vuex + vue-router + webpack + ES6/7 + fetch + less + flex + svg +element-ui
+
+
 ## 项目运行
 
 #### 注意：由于涉及大量的 ES6/7 等新属性，node 需要 6.0 以上版本
@@ -101,9 +69,7 @@ npm run dev
 
 
 
-# 效果演示
-#### 示例(相关UI的截图，并不是本项目的)
-<img src="https://raw.githubusercontent.com/bailicangdu/vue2-manage/master/screenshots/manage_home.png"/>
+
 
 
 
